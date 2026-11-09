@@ -1,6 +1,6 @@
 # Briefing-skill
 
-A Claude skill that turns a company name into a sourced briefing: what it does, how it makes money, HQ, latest funding and backers, moat, biggest revenue stream, and its **Asia footprint** (offices, revenue, customers, partners).
+A Claude skill that turns a company name into a sourced briefing: what it does, how it makes money, HQ, latest funding and backers, biggest revenue stream, **competitive landscape**, a **moat deep dive** (own models vs rented, keystone clients), **risks & dependencies** (people, culture, cost, infra, legal), its **Asia footprint**, and **questions to ask if you are considering joining**.
 
 Built for keeping up with AI-native and new-business-model companies.
 
