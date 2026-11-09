@@ -33,6 +33,16 @@ Turn a company name into a sourced, skimmable briefing. The reader wants to unde
 - **Use the latest ARR for multiples.** Fast growers change monthly. Compute valuation ÷ ARR with the *newest* ARR, and say if the round was priced on an older figure (e.g. "~79x at the round, ~40x on today's ARR").
 - **Company blog beats aggregators for ARR.** Search `{Co} ARR {current month}` and check the company's own blog before trusting Latka/Sacra figures.
 
+## Official filings beat data sites (learned from FINBOURNE)
+Many private companies outside the US must file accounts publicly. Check these **before** trusting aggregator revenue figures, which can be off by 2–4x:
+- 🇬🇧 UK — Companies House (free; Endole and similar sites summarise it)
+- 🇮🇪 Ireland — CRO · 🇩🇪 Germany — Unternehmensregister · 🇫🇷 France — Pappers/Infogreffe
+- 🇸🇬 Singapore — ACRA · 🇭🇰 Hong Kong — Companies Registry · 🇦🇺 Australia — ASIC · 🇯🇵 Japan — official gazette (kanpō) balance-sheet notices
+From filings, report turnover, profit/loss, cash, net assets, and any going-concern note. Mark the filing period, since filed accounts can be 6–18 months old.
+
+## Classify the company first
+State in the header whether it is **AI-native** (product is built around models it trains or deeply depends on), **AI-application** (built on rented frontier models), or **AI-adopter** (an established software/fintech product adding AI features). This sets how to read the moat and the risks.
+
 ## Moat logic for application-layer companies (learned from Sierra)
 If the core models are rented, don't stop at "it's a wrapper". Explain where the moat comes from instead: orchestration and evaluation tooling, integrations into customer systems, deployment know-how, pricing model, data loop, and distribution. Also check:
 - **Pricing-model risk** — e.g. outcome-based pricing means the company pays for model calls on failed attempts.
@@ -93,3 +103,4 @@ Default: markdown in chat. If the user asks for a file, save to `briefings/<comp
 Completed briefings at the target depth:
 - `examples/elevenlabs.md` — a company that trains its own models (voice AI).
 - `examples/sierra.md` — an application-layer company on top of frontier labs (customer-service agents).
+- `examples/finbourne.md` — an established fintech adding AI, with revenue from public filings (UK).

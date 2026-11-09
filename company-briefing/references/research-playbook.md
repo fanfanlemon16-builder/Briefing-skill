@@ -9,6 +9,7 @@ Run batch 1 in parallel; then run batch 2 for any section that is still thin. Re
 | 1 | Funding | `{Co} funding round {YYYY} valuation lead investor` |
 | 2 | Funding | `{Co} tender offer OR secondary valuation {YYYY}` |
 | 3 | Revenue | `{Co} ARR revenue {YYYY}` |
+| 3b | Filings | `{Co} accounts turnover loss Companies House OR ACRA OR ASIC` (for non-US private companies) |
 | 4 | Business model | `{Co} pricing business model enterprise vs self-serve revenue split` |
 | 5 | Products | `{Co} products launch {YYYY}` |
 | 6 | HQ & founders | `{Co} headquarters founders CEO` |

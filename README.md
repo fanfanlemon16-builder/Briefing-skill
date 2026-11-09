@@ -12,6 +12,7 @@ company-briefing/
   references/template.md         # output format
   examples/elevenlabs.md         # worked example: owns its models
   examples/sierra.md             # worked example: built on frontier labs
+  examples/finbourne.md          # worked example: fintech adding AI, UK filings
 ```
 
 ## Install
