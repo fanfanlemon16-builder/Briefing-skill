@@ -96,6 +96,16 @@ Tailor to *this* company — no generic interview questions. Group into:
 
 Add **"Check yourself"**: things to verify outside the interview (Glassdoor/Blind, LinkedIn tenure of recent leavers, back-channel with ex-employees, court records).
 
+## Role mode (when the user names an open job)
+If the user mentions a specific role (e.g. "Enterprise Sales Director APAC"):
+1. **Use the posting to disambiguate.** Search `{Co} "{role title}"` first; the posting reveals which company it is (common names like Velocity or Omni match many firms).
+2. **Check the posting itself:** location, pay if listed, required experience, reporting line, "first hire" language, posting date (flag if 6+ weeks old), and whether it appears on the company's own careers board or only on aggregators.
+3. **Add "The role" section** after Asia footprint: posting facts, what the job really is (buyer, sales cycle, deal shape), green flags, red flags.
+4. **Run an APAC readiness check for the role:** local entity/office, licences (for regulated products), named local customers, regional leader in place, in-region support. A founding role in an empty region is a very different job from joining an existing team.
+5. **Tailor "Questions to ask"** to the role, starting with the riskiest gap found.
+6. **Multiple roles → add a comparison file** (`briefings/apac-roles-comparison-<date>.md`) with a side-by-side table and a short read-out.
+In role mode, keep each briefing compact (shorter tables, ~10–15 sources).
+
 ## Output
 
 Default: markdown in chat. If the user asks for a file, save to `briefings/<company-slug>-<YYYY-MM-DD>.md`.
