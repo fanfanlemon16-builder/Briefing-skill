@@ -1,6 +1,6 @@
 ---
 name: company-briefing
-description: Produce an investor-style briefing on a company (especially AI-native or new-business-model startups) from just its name. Covers what it does, how it makes money, HQ, funding and backers, biggest revenue stream, competitive landscape, a deep moat analysis (own models vs built on frontier labs, keystone clients), risks and dependencies (people, culture, cost, infrastructure, legal), Asia footprint, and questions to ask if considering joining. Use when the user gives a company name and asks for a briefing, profile, rundown, "tell me about X", "who is X", or "should I join X".
+description: Produce an investor-style briefing on a company (especially AI-native or new-business-model startups) from just its name. Covers what it does, how it makes money, HQ, funding and backers, biggest revenue stream, competitive landscape, a deep moat analysis (own models vs built on frontier labs, keystone clients), risks and dependencies (people, culture, cost, infrastructure, legal), Asia footprint, and questions to ask if considering joining. Use whenever the user sends just a company name (e.g. "Acme", "Acme AI", or a name plus a job title), or asks for a briefing, profile, rundown, "tell me about X", "who is X", or "should I join X".
 ---
 
 # Company Briefing
@@ -9,6 +9,7 @@ Turn a company name into a sourced, skimmable briefing. The reader wants to unde
 
 ## Workflow
 
+0. **A bare company name is a request.** If the message is only a company name (optionally with a role), run the full briefing without asking what the user wants.
 1. **Disambiguate.** Confirm which company is meant. If two plausible companies share the name, ask once; otherwise pick the obvious one and state it in the header.
 2. **Research in parallel.** Run the searches in `references/research-playbook.md` in one batch, then a second batch for thin sections. Do at least one search per section. Put the current year in queries.
 3. **Reconcile.** Apply the rules below before writing.
