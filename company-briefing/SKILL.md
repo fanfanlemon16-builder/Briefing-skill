@@ -29,11 +29,11 @@ Turn a company name into a sourced, skimmable briefing. The reader wants to unde
   - 🟡 **Reported** — single source or secondary press, not confirmed by the company.
   - 🔍 **Signal** — job postings, docs, changelogs, localized pages. Useful but not proof.
 - **Don't invent.** If a field can't be found, write "Not disclosed" and add it to Open questions.
-- **Watch for name collisions.** Common names (e.g. "Sierra") pull in unrelated companies with their own funding news. Check every number belongs to the right company, and say which company it is in the header.
+- **Watch for name collisions.** Common names pull in unrelated companies with their own funding news. Check every number belongs to the right company, and say which company it is in the header.
 - **Use the latest ARR for multiples.** Fast growers change monthly. Compute valuation ÷ ARR with the *newest* ARR, and say if the round was priced on an older figure (e.g. "~79x at the round, ~40x on today's ARR").
 - **Company blog beats aggregators for ARR.** Search `{Co} ARR {current month}` and check the company's own blog before trusting Latka/Sacra figures.
 
-## Official filings beat data sites (learned from FINBOURNE)
+## Official filings beat data sites
 Many private companies outside the US must file accounts publicly. Check these **before** trusting aggregator revenue figures, which can be off by 2–4x:
 - 🇬🇧 UK — Companies House (free; Endole and similar sites summarise it)
 - 🇮🇪 Ireland — CRO · 🇩🇪 Germany — Unternehmensregister · 🇫🇷 France — Pappers/Infogreffe
@@ -43,7 +43,7 @@ From filings, report turnover, profit/loss, cash, net assets, and any going-conc
 ## Classify the company first
 State in the header whether it is **AI-native** (product is built around models it trains or deeply depends on), **AI-application** (built on rented frontier models), or **AI-adopter** (an established software/fintech product adding AI features). This sets how to read the moat and the risks.
 
-## Moat logic for application-layer companies (learned from Sierra)
+## Moat logic for application-layer companies
 If the core models are rented, don't stop at "it's a wrapper". Explain where the moat comes from instead: orchestration and evaluation tooling, integrations into customer systems, deployment know-how, pricing model, data loop, and distribution. Also check:
 - **Pricing-model risk** — e.g. outcome-based pricing means the company pays for model calls on failed attempts.
 - **Services intensity** — long, hands-on deployments act as a moat but drag on margins.
@@ -98,7 +98,7 @@ Add **"Check yourself"**: things to verify outside the interview (Glassdoor/Blin
 
 ## Role mode (when the user names an open job)
 If the user mentions a specific role (e.g. "Enterprise Sales Director APAC"):
-1. **Use the posting to disambiguate.** Search `{Co} "{role title}"` first; the posting reveals which company it is (common names like Velocity or Omni match many firms).
+1. **Use the posting to disambiguate.** Search `{Co} "{role title}"` first; the posting reveals which company it is (common names often match several firms).
 2. **Check the posting itself:** location, pay if listed, required experience, reporting line, "first hire" language, posting date (flag if 6+ weeks old), and whether it appears on the company's own careers board or only on aggregators.
 3. **Add "The role" section** after Asia footprint: posting facts, what the job really is (buyer, sales cycle, deal shape), green flags, red flags.
 4. **Run an APAC readiness check for the role:** local entity/office, licences (for regulated products), named local customers, regional leader in place, in-region support. A founding role in an empty region is a very different job from joining an existing team.
@@ -110,7 +110,6 @@ In role mode, keep each briefing compact (shorter tables, ~10–15 sources).
 
 Default: markdown in chat. If the user asks for a file, save to `briefings/<company-slug>-<YYYY-MM-DD>.md`.
 
-Completed briefings at the target depth:
-- `examples/elevenlabs.md` — a company that trains its own models (voice AI).
-- `examples/sierra.md` — an application-layer company on top of frontier labs (customer-service agents).
-- `examples/finbourne.md` — an established fintech adding AI, with revenue from public filings (UK).
+**Briefings are the user's private output.** Never add them to the skill folder, and never commit or push them. The repo's `.gitignore` excludes `briefings/`; keep it that way. If the user wants to share one, ask first.
+
+See `examples/sample-briefing.md` for the target depth and format. It uses a **fictional** company; never copy its facts into a real briefing.
