@@ -29,6 +29,15 @@ Turn a company name into a sourced, skimmable briefing. The reader wants to unde
   - 🟡 **Reported** — single source or secondary press, not confirmed by the company.
   - 🔍 **Signal** — job postings, docs, changelogs, localized pages. Useful but not proof.
 - **Don't invent.** If a field can't be found, write "Not disclosed" and add it to Open questions.
+- **Watch for name collisions.** Common names (e.g. "Sierra") pull in unrelated companies with their own funding news. Check every number belongs to the right company, and say which company it is in the header.
+- **Use the latest ARR for multiples.** Fast growers change monthly. Compute valuation ÷ ARR with the *newest* ARR, and say if the round was priced on an older figure (e.g. "~79x at the round, ~40x on today's ARR").
+- **Company blog beats aggregators for ARR.** Search `{Co} ARR {current month}` and check the company's own blog before trusting Latka/Sacra figures.
+
+## Moat logic for application-layer companies (learned from Sierra)
+If the core models are rented, don't stop at "it's a wrapper". Explain where the moat comes from instead: orchestration and evaluation tooling, integrations into customer systems, deployment know-how, pricing model, data loop, and distribution. Also check:
+- **Pricing-model risk** — e.g. outcome-based pricing means the company pays for model calls on failed attempts.
+- **Services intensity** — long, hands-on deployments act as a moat but drag on margins.
+- **Supplier-as-competitor** — the model provider could sell the same solution directly.
 
 ## Section guidance
 
@@ -55,7 +64,7 @@ End with a moat rating *(analysis)*: **Strong / Moderate / Thin**, and one sente
 
 ### Risks & dependencies
 Cover each category; rate severity **High / Medium / Low** *(analysis)* with evidence:
-- **People** — key-person dependence on founders, leadership gaps, recent senior hires/departures, hiring bottlenecks.
+- **People** — key-person dependence on founders, leadership gaps, recent senior hires/departures, hiring bottlenecks, and **founder outside roles or conflicts** (board seats at suppliers or competitors).
 - **Culture & org** — structure, how it is scaling, employee sentiment (Glassdoor/Blind if found), remote model.
 - **Cost & unit economics** — compute cost, gross margin, price pressure, burn.
 - **Foundational infrastructure** — single cloud, GPU supply, reliance on third-party models/APIs, and whether suppliers are also competitors.
@@ -81,4 +90,6 @@ Add **"Check yourself"**: things to verify outside the interview (Glassdoor/Blin
 
 Default: markdown in chat. If the user asks for a file, save to `briefings/<company-slug>-<YYYY-MM-DD>.md`.
 
-See `examples/elevenlabs.md` for a completed briefing at the target level of depth.
+Completed briefings at the target depth:
+- `examples/elevenlabs.md` — a company that trains its own models (voice AI).
+- `examples/sierra.md` — an application-layer company on top of frontier labs (customer-service agents).

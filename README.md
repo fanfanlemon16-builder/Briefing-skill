@@ -10,7 +10,8 @@ company-briefing/
   SKILL.md                       # instructions + reconciliation rules
   references/research-playbook.md  # search queries and source priorities
   references/template.md         # output format
-  examples/elevenlabs.md         # worked example
+  examples/elevenlabs.md         # worked example: owns its models
+  examples/sierra.md             # worked example: built on frontier labs
 ```
 
 ## Install
